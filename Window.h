@@ -27,12 +27,14 @@ public:
 	GLfloat getarticulacion3() { return articulacion3; }
 	GLfloat getarticulacion4() { return articulacion4; }
 	GLfloat getarticulacion5() { return articulacion5; }
+	GLfloat getarticulacion6() { return articulacion6; }//para la rotacion hacia delante de la llanta
+	GLfloat getarticulacion7() { return articulacion7; }//para la rotacion hacia atras de la llanta
 
 	~Window();
 private: 
 	GLFWwindow *mainWindow;
 	GLint width, height;
-	GLfloat rotax, rotay, rotaz, articulacion1, articulacion2, articulacion3, articulacion4, articulacion5;//variables para las rotaciones
+	GLfloat rotax, rotay, rotaz, articulacion1, articulacion2, articulacion3, articulacion4, articulacion5, articulacion6, articulacion7;//variables para las rotaciones
 	bool mov1, mov2, mov3, mov4, mov5;//banderas para saber si el angulo va ser +(true) o -(false)
 	bool keys[1024];
 	GLint bufferWidth, bufferHeight;

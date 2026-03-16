@@ -13,6 +13,8 @@ Window::Window()
 	articulacion3 = 0.0f;
 	articulacion4 = 0.0f;
 	articulacion5 = 0.0f;
+	articulacion6 = 0.0f;//para la rotacion hacia delante de la llanta
+	articulacion7 = 0.0f;//para la rotacion hacia atras de la llanta
 	mov1 = true;
 	mov2 = true;
 	mov3 = true;
@@ -234,6 +236,14 @@ void Window::ManejaTeclado(GLFWwindow* window, int key, int code, int action, in
 			theWindow->articulacion5 = 0.0f;
 			theWindow->mov5 = true;  //si llega a 0 mov5->true
 		}
+	}
+	if (key == GLFW_KEY_O)
+	{
+		theWindow->articulacion6 += 5.0f;
+	}
+	if (key == GLFW_KEY_P)
+	{
+		theWindow->articulacion7 -= 5.0f;
 	}
 
 	if (key >= 0 && key < 1024)
